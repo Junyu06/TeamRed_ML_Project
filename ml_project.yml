@@ -1,0 +1,14 @@
+name: ml_project
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9.21
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - missingno       # Missing value visualization
+  - category_encoders  # Categorical encoding
+  - pandas-profiling   # Automated dataset report
