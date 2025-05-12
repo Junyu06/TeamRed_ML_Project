@@ -38,6 +38,7 @@ def evaluate_and_plot(model_name, model, X_test, y_test, output_dir='binary/plot
     # ROC Curve
     fpr, tpr, _ = roc_curve(y_test, y_prob)
     roc_auc = auc(fpr, tpr)
+    print(f"ROC AUC: {roc_auc:.4f}")
     RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc).plot()
     plt.title(f'{model_name} - ROC Curve (AUC={roc_auc:.2f})')
     plt.tight_layout()
